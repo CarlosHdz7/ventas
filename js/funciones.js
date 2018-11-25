@@ -22,5 +22,6 @@ function validarFormVacio(formulario){
 				vacios++;
 			}
 	}
+	
 	return vacios;
 }
