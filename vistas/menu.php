@@ -19,7 +19,7 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="inicio.php"><img class="img-responsive logo img-thumbnail" src="../img/ventas.jpg" alt="" width="100px" height="100px"></a>
+            <a class="navbar-brand" href="inicio.php"><img class="img-responsive logo img-thumbnail" src="../img/logo2.png" alt="" width="100px" height="100px"></a>
           </div>
           <div id="navbar" class="collapse navbar-collapse">
 
@@ -54,11 +54,10 @@
             <li><a href="ventas.php"><span class="glyphicon glyphicon-usd"></span> Vender Articulo</a>
             </li>
             
-            <li class="dropdown" >
-              <a href="#" style="color: red"  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user"></span> Usuario: <?php echo $_SESSION['usuario']; ?>  <span class="caret"></span></a>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle btn-user" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user"></span> Usuario: <?php echo $_SESSION['usuario']; ?>  <span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li> <a style="color: red" href="../procesos/salir.php"><span class="glyphicon glyphicon-off"></span> Salir</a></li>
-                
               </ul>
             </li>
           </ul>

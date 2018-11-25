@@ -1,16 +1,25 @@
+$(document).ready(function(){
+	//Para cambiar de tamaño la imagen al hacer scroll
+	$(window).scroll(function() {
+			if ($(document).scrollTop() > 100) {
+				$('.logo').height(50);
+				$('.logo').width(50);
 
-$(window).scroll(function() {
-    if ($(document).scrollTop() > 100) {
-      $('.logo').height(50);
-      $('.logo').width(50);
+			}
+			else {
+				$('.logo').height(100);
+				$('.logo').width(100);
+			}
+		}
+	);
+	
+}); //Fin de la funcion ready
 
-    }
-    else {
-      $('.logo').height(100);
-      $('.logo').width(100);
-    }
-  }
-);
+
+
+/*----------------------------------*/
+/*        	funciones		            */
+/*----------------------------------*/
 
 function validarFormVacio(formulario){
 	datos=$('#' + formulario).serialize();
@@ -22,6 +31,5 @@ function validarFormVacio(formulario){
 				vacios++;
 			}
 	}
-	
 	return vacios;
 }

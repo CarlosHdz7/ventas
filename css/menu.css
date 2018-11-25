@@ -25,3 +25,18 @@ section {
   -o-transition:padding 0.5s linear;         
   transition:padding 0.5s linear;  
 }
+
+.btn-user{
+  color:red;
+}
+
+/*---Estilos para INICIO---*/
+.container-home{
+  width: 100%;
+}
+
+.container-title{
+  text-align: center;
+}
+
+/*-------------------------*/
