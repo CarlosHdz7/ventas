@@ -40,27 +40,37 @@ class ventas{
 		$idventa=self::creaFolio();
 		$datos=$_SESSION['tablaComprasTemp'];
 		$idusuario=$_SESSION['iduser'];
-		$r=0;
 
 		for ($i=0; $i < count($datos) ; $i++) { 
 			$d=explode("||", $datos[$i]);
 
-			$sql="INSERT into ventas (id_venta,
-										id_cliente,
-										id_producto,
-										id_usuario,
-										precio,
-										fechaCompra)
-							values ('$idventa',
-									'$d[5]',
-									'$d[0]',
-									'$idusuario',
-									'$d[3]',
-									'$fecha')";
-			$r=$r + $result=mysqli_query($conexion,$sql);
+			$sql="INSERT into ventas (
+				id_venta,
+				id_cliente,
+				id_producto,
+				id_usuario,
+				precio,
+				fechaCompra)
+			values (
+				'$idventa',
+				'$d[5]',
+				'$d[0]',
+				'$idusuario',
+				'$d[3]',
+				'$fecha'
+			)";
+			//esto contiene true o false dependiendo si se realizo el insert
+			$result=mysqli_query($conexion,$sql);
 		}
 
-		return $r;
+		//si actualizar se hizo entonces se devuelve true a la venta
+		$actualizar_cantidad = self::actualizarCantidad($d[0]);
+		if($actualizar_cantidad == True){
+			return $result;
+		} else {
+			return false;
+		}
+
 	}
 
 	public function creaFolio(){
@@ -78,6 +88,7 @@ class ventas{
 			return $id + 1;
 		}
 	}
+
 	public function nombreCliente($idCliente){
 		$c= new conectar();
 		$conexion=$c->conexion();
@@ -108,6 +119,24 @@ class ventas{
 		}
 
 		return $total;
+	}
+
+	public function actualizarCantidad($idProducto){
+		$c = new conectar();
+		$conexion = $c->conexion();
+		
+		//obtenemos la cantidad de articulos
+		$sql = "SELECT * FROM articulos WHERE id_producto = ".$idProducto;
+		$query = mysqli_query($conexion,$sql);
+		$data = mysqli_fetch_row($query);
+		$cantidad = $data[6];
+		$nueva_cantidad = (int)$cantidad - 1;
+
+		$sql2 = "UPDATE articulos SET cantidad = ".$nueva_cantidad." WHERE id_producto = ".$idProducto;
+
+		$query2 = mysqli_query($conexion,$sql2);		
+		return $query2;
+
 	}
 }
 
