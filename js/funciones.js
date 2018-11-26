@@ -12,7 +12,50 @@ $(document).ready(function(){
 			}
 		}
 	);
-	
+
+	$('.js-btn-menu').on('click',function(){
+		if($('.logo').hasClass('hide')){
+			setTimeout(function(){
+				$('.logo').removeClass('hide');
+			},450);
+		} else {
+			$('.logo').addClass('hide');
+		}
+	});
+
+	var valor = $('.active-btn').val();
+	if(valor === 'inicio'){
+		$('.btn-menu').each(function(){
+			$(this).removeClass('active-option');
+		});
+		$('.btn-menu-inicio').addClass('active-option');
+	}
+	if(valor === 'articulos'){
+		$('.btn-menu').each(function(){
+			$(this).removeClass('active-option');
+		});
+		$('.btn-menu-articulos').addClass('active-option');
+	}
+
+	if(valor === 'categorias'){
+		$('.btn-menu').each(function(){
+			$(this).removeClass('active-option');
+		});
+		$('.btn-menu-articulos').addClass('active-option');
+	}
+	if(valor === 'clientes'){
+		$('.btn-menu').each(function(){
+			$(this).removeClass('active-option');
+		});
+		$('.btn-menu-clientes').addClass('active-option');
+	}
+	if(valor === 'ventas'){
+		$('.btn-menu').each(function(){
+			$(this).removeClass('active-option');
+		});
+		$('.btn-menu-ventas').addClass('active-option');
+	}
+
 }); //Fin de la funcion ready
 
 
@@ -33,3 +76,4 @@ function validarFormVacio(formulario){
 	}
 	return vacios;
 }
+

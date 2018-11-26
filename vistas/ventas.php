@@ -14,19 +14,20 @@
 <body>
 
 	<div class="container">
-		 <h1>Venta de productos</h1>
-		 <div class="row">
-		 	<div class="col-sm-12">
-		 		<span class="btn btn-default" id="ventaProductosBtn">Vender producto</span>
-		 		<span class="btn btn-default" id="ventasHechasBtn">Ventas hechas</span>
-		 	</div>
-		 </div>
-		 <div class="row">
-		 	<div class="col-sm-12">
-		 		<div id="ventaProductos"></div>
-		 		<div id="ventasHechas"></div>
-		 	</div>
-		 </div>
+		<input type="hidden" class="active-btn" value="ventas">
+		<h1>Venta de productos</h1>
+		<div class="row">
+		<div class="col-sm-12">
+			<span class="btn btn-default" id="ventaProductosBtn">Vender producto</span>
+			<span class="btn btn-default" id="ventasHechasBtn">Ventas hechas</span>
+		</div>
+		</div>
+		<div class="row">
+		<div class="col-sm-12">
+			<div id="ventaProductos"></div>
+			<div id="ventasHechas"></div>
+		</div>
+		</div>
 	</div>
 </body>
 </html>

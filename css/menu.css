@@ -30,7 +30,13 @@ section {
   color:red;
 }
 
-/*---Estilos para INICIO---*/
+/*---------MENU-----------*/
+.active-option{
+  border-bottom: #76C2AF 2px solid;
+}
+/*-------------------------*/
+
+/*---------INICIO-----------*/
 .container-home{
   width: 100%;
 }
@@ -38,5 +44,14 @@ section {
 .container-title{
   text-align: center;
 }
-
 /*-------------------------*/
+
+/*---------Utilidades------*/
+.hide{
+  display: none;
+}
+.show{
+  display: inline-block;
+}
+/*-------------------------*/
+

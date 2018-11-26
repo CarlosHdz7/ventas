@@ -13,6 +13,7 @@
 </head>
 <body>
 	<div class="container container-home">
+			<input type="hidden" class="active-btn" value="inicio">
 		<div class="container-title">
 			<h1 class="container-title">Sistema de ventas de Electrodomesticos</h1>
 			<img src="../img/logo2.png" class="img-fluid" alt="Responsive image" width="100px" height="100px">

@@ -2,8 +2,6 @@
 session_start();
 if(isset($_SESSION['usuario'])){
 ?>
-
-
 	<!DOCTYPE html>
 	<html>
 	<head>
@@ -12,6 +10,7 @@ if(isset($_SESSION['usuario'])){
 	</head>
 	<body>
 		<div class="container">
+			<input type="hidden" class="active-btn" value="clientes">
 			<h1>Clientes</h1>
 			<div class="row">
 				<div class="col-sm-4">

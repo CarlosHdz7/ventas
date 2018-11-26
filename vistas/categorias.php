@@ -13,6 +13,7 @@
 <body>
 
 	<div class="container">
+		<input type="hidden" class="active-btn" value="categorias">
 		<h1>Categorias</h1>
 		<div class="row">
 			<div class="col-sm-4">
