@@ -44,6 +44,14 @@ section {
 .container-title{
   text-align: center;
 }
+
+.container-cover{
+  text-align: center;
+}
+.cover{
+  max-width: 100%;
+  height: auto;
+}
 /*-------------------------*/
 
 
